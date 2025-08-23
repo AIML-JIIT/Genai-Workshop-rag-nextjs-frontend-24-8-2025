@@ -1,6 +1,6 @@
 # PDF Intelligence Assistant Frontend
 
-A Next.js-based frontend chatbot interface for querying content from uploaded PDFs (such as medical research papers, books, and articles). This project is designed for medical or academic professionals, students, and researchers who want to interactively search, explore, and visualize information extracted from complex documents.
+A Next.js-based frontend chatbot interface for querying content from uploaded PDFs or pptx. This project is designed for academic professionals, students who want visualize information extracted from complex documents.
 
 ---
 
@@ -18,7 +18,7 @@ A Next.js-based frontend chatbot interface for querying content from uploaded PD
 
 ## How It Works
 
-1. **Upload PDFs:** Drag and drop or select PDF files to upload. The backend processes your documents for extraction and indexing.
+1. **Upload PDFs:** Drag and drop or select PDF or pptx files to upload. The backend processes your documents for extraction and indexing.
 2. **Ask Questions:** Use the chat interface to ask queries in natural language.
 3. **Get Contextual Answers:** The assistant replies with answers, each linked to the specific source (book/paper) and a relevancy score.
 4. **Visualize Results:** Click "View Graph" to see a mindmap of answer snippets and their relationships to your query.
@@ -34,56 +34,6 @@ A Next.js-based frontend chatbot interface for querying content from uploaded PD
 - **Tailwind CSS**: UI styling.
 - **PDF.js (via backend)**: PDF parsing and extraction (handled server-side).
 - **Backend (not included)**: Handles PDF ingestion, semantic search, and answer retrieval.
-
----
-
-## Getting Started
-
-### Prerequisites
-
-- Node.js (v18+ recommended)
-- npm or yarn
-- Backend service that implements `/upload/` and `/query/` endpoints (see API section).
-
-### Installation
-
-```bash
-git clone https://github.com/SwayamGupta12345/Medi_Front.git
-cd Medi_Front
-npm install
-```
-
-### Environment Variables
-
-Create a `.env.local` file with your backend API base URL:
-
-```
-NEXT_PUBLIC_API_BASE=https://your-backend-api-url.com
-```
-
-### Running Locally
-
-```bash
-npm run dev
-```
-
-Visit `http://localhost:3000` in your browser.
-
----
-
-## API Reference
-
-- `POST /upload/` — Upload PDFs for extraction and indexing.
-- `POST /query/` — Pass `{ question: "your question" }` to receive results in the format:
-  ```json
-  [
-    {
-      "book": "Document Title",
-      "text": "Relevant snippet",
-      "score": 0.95
-    }
-  ]
-  ```
 
 ---
 
@@ -122,7 +72,3 @@ Contributions welcome! Please open issues or submit pull requests for features, 
 - Thanks to the open-source Next.js and ReactFlow communities.
 
 ---
-
-## Contact
-
-Questions or feedback? Reach out via [GitHub Issues](https://github.com/SwayamGupta12345/Medi_Front/issues).
