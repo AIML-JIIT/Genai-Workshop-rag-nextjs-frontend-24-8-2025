@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Medicinal Project',
-  description: 'Developed for easily medical research and paper understanding.'
+  title: 'GENAI RAG PROJECT',
+  description: 'Developed for easy understanding and study purposes.'
 }
 
 export default function RootLayout({

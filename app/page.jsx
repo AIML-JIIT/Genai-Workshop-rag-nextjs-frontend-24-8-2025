@@ -162,30 +162,6 @@ export default function PDFChatAssistant() {
     setUploading(false);
   };
 
-  // const handleFileSelect = (files) => {
-  //   if (!files || files.length === 0) return;
-
-  //   const validFiles = Array.from(files).filter(
-  //     (file) => file.type === "application/pdf"
-  //   );
-
-  //   const existingFileKeys = new Set(pendingFiles.map((f) => f.name + f.size));
-
-  //   const newPendingFiles = validFiles
-  //     .filter((file) => !existingFileKeys.has(file.name + file.size))
-  //     .map((file) => ({
-  //       file,
-  //       name: file.name,
-  //       size: file.size,
-  //       id: Math.random().toString(36).substr(2, 9),
-  //     }));
-
-  //   if (newPendingFiles.length < validFiles.length) {
-  //     alert("Some files were already added and skipped.");
-  //   }
-
-  //   setPendingFiles((prev) => [...prev, ...newPendingFiles]);
-  // };
   const handleFileSelect = (files) => {
     if (!files || files.length === 0) return;
 
